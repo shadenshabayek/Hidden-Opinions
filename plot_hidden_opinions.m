@@ -1,5 +1,7 @@
 function f=plot_hidden_opinions(n,K,Ex,k,FO,tau,mu)
 
+%%%%%%%SHABAYEK 2020, code for the paper "Hidden Opinions" 
+
 %to be used to plot the results of hidden_opinions.m
 
 %Input:
@@ -13,10 +15,10 @@ function f=plot_hidden_opinions(n,K,Ex,k,FO,tau,mu)
 %mu: parameter in law of motion 
 
 %Output:
-%evolution of opinions
+%evolution of opinions with a color map going from 1 (red) to -1 (blue)
 
 jetcustom=jet(n); %color from red to blue 
-r1=K(1,:); %first row gives the color
+r1=K(1,:); %first row gives the color, so initial opinions give the color
 colors = interp1(linspace(-1, 1, n), jetcustom, r1.');
 
 f=figure()
