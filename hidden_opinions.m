@@ -74,7 +74,7 @@ M=zeros(T,n); %Opinion matrix
 
 M(1,:)=transpose(Alpha);
 
-L=zeros(length(Ex),length(Ex)); %matrix for the law of motion, to keep track of the opinions of expressers.
+L=zeros(n,n); %matrix for the law of motion, to keep track of the opinions of expressers.
 
 for t=2:T
         
