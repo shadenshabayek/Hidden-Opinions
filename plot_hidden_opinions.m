@@ -54,8 +54,8 @@ end
     
     drawnow 
     
-    c1=length(find(FO>0.92));
-    c2=length(find(FO<-0.92));
+    c1=length(find(FO>0.99));
+    c2=length(find(FO<-0.99));
     txt = {['Opinion difference threshold \tau: ' ,num2str(tau)];['Nb of ind. with long-run opinion 1 : ' , num2str(c1),'/',num2str(n)];['Nb of ind. with long-run opinion -1 : ' , num2str(c2),'/',num2str(n)]};
     text(k/2,1.3,txt)
 
