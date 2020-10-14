@@ -1,7 +1,5 @@
 function f=plot_hidden_opinions(n,K,Ex,k,FO,tau,mu)
 
-%%%%%%%SHABAYEK 2020, code for the paper "Hidden Opinions" 
-
 %to be used to plot the results of hidden_opinions.m
 
 %Input:
@@ -15,10 +13,10 @@ function f=plot_hidden_opinions(n,K,Ex,k,FO,tau,mu)
 %mu: parameter in law of motion 
 
 %Output:
-%evolution of opinions with a color map going from 1 (red) to -1 (blue)
+%evolution of opinions
 
 jetcustom=jet(n); %color from red to blue 
-r1=K(1,:); %first row gives the color, so initial opinions give the color
+r1=K(1,:); %first row gives the color
 colors = interp1(linspace(-1, 1, n), jetcustom, r1.');
 
 f=figure()
@@ -58,6 +56,14 @@ end
     
     c1=length(find(FO>0.92));
     c2=length(find(FO<-0.92));
-    
-    title({['Out of ' , num2str(n) , ' individuals, '  num2str(c1)  ' have long-run opinion 1 and ' num2str(c2) , ' have long-run opinion -1'];[ '\tau = ' , num2str(tau) , ' and \mu = ' , num2str(mu) ]})
-    
+    txt = {['Opinion difference threshold \tau: ' ,num2str(tau)];['Nb of ind. with long-run opinion 1 : ' , num2str(c1),'/',num2str(n)];['Nb of ind. with long-run opinion -1 : ' , num2str(c2),'/',num2str(n)]};
+    text(k/2,1.3,txt)
+
+% title({['Out of ' , num2str(n) , ' individuals, '  num2str(c1)  ' have long-run opinion 1 and ' num2str(c2) , ' have long-run opinion -1'];[ '\tau = ' , num2str(tau) , ' and \mu = ' , num2str(mu) ]})   
+%    Legend=cell(n,1);
+% 
+%  for iter=1:n
+%    Legend{iter}=strcat(  num2str(iter) , '(' , num2str(K(1,iter)) , ')');
+%  end
+%  legend(Legend, 'Location','northeast','Orientation','vertical');
+%  legend boxoff ;
