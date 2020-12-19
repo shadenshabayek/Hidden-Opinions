@@ -10,7 +10,7 @@ It returns final opinions and the set of expressers.
 
 2) plot_hidden_opinions.m (uses the output of hidden_opinion.m)
 
-This function plots the evolution of opinions over T periods. Solid line correspond to expressers, while dashed correspond to consensual. The colors correspond to te initial opinions mapped to a [-1,1 color map. 
+This function plots the evolution of opinions over T periods. Solid line correspond to expressers, while dashed correspond to consensual. The colors correspond to te initial opinions mapped to a [-1,1] color map. 
 
 3) plot_graph_hidden_opinions.m (uses the output of hidden_opinion.m)
 
