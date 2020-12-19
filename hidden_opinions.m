@@ -62,8 +62,9 @@ for i=1:n
     delta(i)=deltai(G,n,i);
 end
 
-Ex=find(delta>=0.5); %expressers
-Con=find(delta<0.5); %consensual
+% Notice that you can use whatever centrality measure you want (just adapte the delta vector) 
+Ex=find(delta>=1); %expressers
+Con=find(delta<1); %consensual
 
 %Step 4: process of interpersonal influence:
 
